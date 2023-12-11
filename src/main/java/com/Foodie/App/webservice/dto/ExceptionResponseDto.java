@@ -1,9 +1,6 @@
 package com.Foodie.App.webservice.dto;
 
 import java.util.Date;
-import java.util.Optional;
-
-import com.Foodie.App.webservice.entity.Users;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,21 +9,21 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ResponseDto {
+public class ExceptionResponseDto {
 
 	private String message;
 	private Date timestamp = new Date();
 	private String status;
-	private Object data;
-
-	public ResponseDto() {}
-
-	public ResponseDto(String message, Date timestamp, String status, Object data) {
+	private String error;
+	
+	public ExceptionResponseDto() {}
+	
+	public ExceptionResponseDto(String message, Date timestamp, String status, String error) {
 		super();
 		this.message = message;
 		this.timestamp = timestamp;
 		this.status = status;
-		this.data = data;
+		this.error = error;
 	}
 
 	public String getMessage() {
@@ -52,26 +49,20 @@ public class ResponseDto {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
-	public Object getData() {
-		return data;
+
+	public String getError() {
+		return error;
 	}
 
-	public void setData(Object data) {
-		this.data = data;
+	public void setError(String error) {
+		this.error = error;
 	}
 
 	@Override
 	public String toString() {
-		return "ResponseDto [message=" + message + ", timestamp=" + timestamp + ", status=" + status + ", data="
-				+ data + "]";
+		return "ExceptionResponseDto [message=" + message + ", timestamp=" + timestamp + ", status=" + status
+				+ ", error=" + error + "]";
 	}
-
-	
-	
-
-	
-	
-	
 	
 }
+

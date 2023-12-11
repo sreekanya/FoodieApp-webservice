@@ -8,5 +8,8 @@ import com.Foodie.App.webservice.entity.Users;
 
 @Repository
 public interface RestaurantsRepository extends JpaRepository<Restaurants, Integer>{
+	boolean existsByRestaurantEmail(String email);
+
+	Restaurants findByRestaurantEmail(String email);
 
 }

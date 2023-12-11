@@ -1,5 +1,7 @@
 package com.Foodie.App.webservice.entity;
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -27,6 +29,9 @@ public class Orders {
 	@Column(name = "order_id")
 	private int orderId;
 	
+	@Column(name = "order_date")
+	private Date orderDate;
+	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="user_id",nullable=false)
     private Users userId;
@@ -43,9 +48,12 @@ public class Orders {
 
 	public Orders() {}
 	
-	public Orders(int orderId, Users userId, Restaurants restaurantId, int orderTotal, String orderStatus) {
+
+	public Orders(int orderId, Date orderDate, Users userId, Restaurants restaurantId, int orderTotal,
+			String orderStatus) {
 		super();
 		this.orderId = orderId;
+		this.orderDate = orderDate;
 		this.userId = userId;
 		this.restaurantId = restaurantId;
 		this.orderTotal = orderTotal;
@@ -59,6 +67,16 @@ public class Orders {
 	public void setOrderId(int orderId) {
 		this.orderId = orderId;
 	}
+
+	public Date getOrderDate() {
+		return orderDate;
+	}
+
+
+	public void setOrderDate( ) {
+		this.orderDate = new Date();
+	}
+
 
 	public Users getUserId() {
 		return userId;
@@ -92,10 +110,11 @@ public class Orders {
 		this.orderStatus = orderStatus;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Orders [orderId=" + orderId + ", userId=" + userId + ", restaurantId=" + restaurantId + ", orderTotal="
-				+ orderTotal + ", orderStatus=" + orderStatus + "]";
+		return "Orders [orderId=" + orderId + ", orderDate=" + orderDate + ", userId=" + userId + ", restaurantId="
+				+ restaurantId + ", orderTotal=" + orderTotal + ", orderStatus=" + orderStatus + "]";
 	}
 	
 }

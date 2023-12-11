@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "93390914-c919-4dbb-a06f-b5d55632f17e",
+		"name": "Foodie_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29784928"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/users",
+						"description": "Get users"
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"Priya\",\n\t\"email\":\"priya@gmail.com\",\n    \"phone\":\"234679766\",\n    \"address\":\"milpitas\",\n    \"foodieCash\":200\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/users",
+						"description": "add users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get one user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/users/53",
+						"description": "Get one user"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":153,\n    \"userName\":\"Maha\",\n\t\"email\":\"maha@gmail.com\",\n    \"phone\":\"234679766\",\n    \"address\":\"Cupertino\",\n    \"foodieCash\":500\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/users",
+						"description": "update user"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/users/200",
+						"description": "Delete user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users Copy",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/users",
+						"description": "Get users"
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"Priya\",\n\t\"email\":\"priya@gmail.com\",\n    \"phone\":\"234679766\",\n    \"address\":\"milpitas\",\n    \"foodieCash\":200\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/users",
+						"description": "add users"
+					},
+					"response": []
+				},
+				{
+					"name": "Get one user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/users/53",
+						"description": "Get one user"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":153,\n    \"userName\":\"Maha\",\n\t\"email\":\"maha@gmail.com\",\n    \"phone\":\"234679766\",\n    \"address\":\"Cupertino\",\n    \"foodieCash\":500\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/users",
+						"description": "update user"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/users/200",
+						"description": "Delete user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/restaurants",
+						"description": "Get restaurants"
+					},
+					"response": []
+				},
+				{
+					"name": "Post Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurantName\":\"PaneraBread\",\n\t\"restaurantEmail\":\"panerabread@gmail.com\",\n    \"restaurantPhone\":\"234679766\",\n    \"restaurantAddress\":\"milpitas\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/restaurants",
+						"description": "Post restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "Get one Restaurant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/restaurants/2",
+						"description": "Get one Restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Restaurant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restaurantId\": 52,\n    \"restaurantName\":\"MacaroniGrill\",\n\t\"restaurantEmail\":\"macaronigrill@gmail.com\",\n    \"restaurantPhone\":\"234679766\",\n    \"restaurantAddress\":\"Cupertino\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/restaurants",
+						"description": "Update Restaurant"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Restaurant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/restaurants/200",
+						"description": "Delete Restaurant"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menus",
+			"item": [
+				{
+					"name": "Get All menu list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/menus",
+						"description": "Get menus"
+					},
+					"response": []
+				},
+				{
+					"name": "Add menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"restaurantId\": {\"restaurantId\": 53},\n\t\"itemName\":\"Cheese Pasta\",\n\t\"price\":\"10\",\n\t\"ingredients\":\"Pasta, Cheese, milk and oregano \",\n\t\"category\":\"main course\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/menus",
+						"description": "Post menu request"
+					},
+					"response": []
+				},
+				{
+					"name": "Get menu by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/menus/10",
+						"description": "Get one menu"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Menu by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"menuId\":3,\n    \"restaurantId\": {\"restaurantId\": 52},\n\t\"itemName\":\"Cheese Pasta\",\n\t\"price\":\"12\",\n\t\"ingredients\":\"Pasta, Cheese, milk and oregano \",\n\t\"category\":\"main course\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/menus",
+						"description": "Update menu"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Menu by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/menus/1",
+						"description": "Delete Menu with Id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/orders",
+						"description": "Get all orders"
+					},
+					"response": []
+				},
+				{
+					"name": "Add order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userId\":{\"userId\":102},\n\t\"restaurantId\":{\"restaurantId\":52},\n    \"orderDate\": \"2023-12-10\",\n\t\"orderTotal\":10,\n\t\"orderStatus\":\"ordered\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/orders",
+						"description": "Post order"
+					},
+					"response": []
+				},
+				{
+					"name": "update order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": 1,\n\t\"userId\":{\"userId\":102},\n\t\"restaurantId\":{\"restaurantId\":53},\n     \"orderDate\": \"2023-12-09\",\n\t\"orderTotal\":20,\n\t\"orderStatus\":\"Shipped\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/orders",
+						"description": "Update order"
+					},
+					"response": []
+				},
+				{
+					"name": "Get order by orderId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/orders/10",
+						"description": "Get order by date"
+					},
+					"response": []
+				},
+				{
+					"name": "delete order by orderId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/orders/10",
+						"description": "Delete order by id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Get all Payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/payments",
+						"description": "Get payments"
+					},
+					"response": []
+				},
+				{
+					"name": "Add payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\":{\"orderId\":2},\n\t\"totalAmount\":30\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/payments",
+						"description": "Post Payments"
+					},
+					"response": []
+				},
+				{
+					"name": "Get one payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8088/foodie-webservice/api/payments/1",
+						"description": "Get one payment"
+					},
+					"response": []
+				},
+				{
+					"name": "Update payment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentId\":1,\n    \"orderId\":{\"orderId\":2},\n\t\"totalAmount\":40\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8088/foodie-webservice/api/payments",
+						"description": "Put payment"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete payment by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "://localhost:8088/foodie-webservice/api/payments/2",
+						"description": "Delet payment"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

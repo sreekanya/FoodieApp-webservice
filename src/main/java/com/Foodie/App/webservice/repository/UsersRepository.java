@@ -7,5 +7,8 @@ import com.Foodie.App.webservice.entity.Users;
 
 @Repository
 public interface UsersRepository extends JpaRepository<Users, Integer>{
+	boolean existsByEmail(String email);
+
+	Users findByEmail(String email);
 
 }
