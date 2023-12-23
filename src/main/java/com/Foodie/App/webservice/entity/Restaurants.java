@@ -37,20 +37,25 @@ public class Restaurants {
 	@Column(name="restaurant_address")
 	private String restaurantAddress;
 	
-//	@Column(name="image_link")
-//	private String imageLink;
+	@Column(name="image_link")
+	private String imageLink;
 	
 	public Restaurants() {}
 
+	
+
 	public Restaurants(int restaurantId, String restaurantName, String restaurantEmail, String restaurantPhone,
-			String restaurantAddress) {
+			String restaurantAddress, String imageLink) {
 		super();
 		this.restaurantId = restaurantId;
 		this.restaurantName = restaurantName;
 		this.restaurantEmail = restaurantEmail;
 		this.restaurantPhone = restaurantPhone;
 		this.restaurantAddress = restaurantAddress;
+		this.imageLink = imageLink;
 	}
+
+
 
 	public int getRestaurantId() {
 		return restaurantId;
@@ -92,11 +97,21 @@ public class Restaurants {
 		this.restaurantAddress = restaurantAddress;
 	}
 
+	public String getImageLink() {
+		return imageLink;
+	}
+
+	public void setImageLink(String imageLink) {
+		this.imageLink = imageLink;
+	}
+
 	@Override
 	public String toString() {
 		return "Restaurants [restaurantId=" + restaurantId + ", restaurantName=" + restaurantName + ", restaurantEmail="
 				+ restaurantEmail + ", restaurantPhone=" + restaurantPhone + ", restaurantAddress=" + restaurantAddress
-				+ "]";
+				+ ", imageLink=" + imageLink + "]";
 	}
+
+	
 	
 }

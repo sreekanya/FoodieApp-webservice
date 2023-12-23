@@ -43,10 +43,15 @@ public class Menu {
 	
 	@Column(name = "category")
     private String category;
+	
+	@Column(name = "recipe_img")
+    private String recipeImage;
 
 	public Menu() {}
 	
-	public Menu(int menuId, Restaurants restaurantId, String itemName, int price, String ingredients, String category) {
+
+	public Menu(int menuId, Restaurants restaurantId, String itemName, int price, String ingredients, String category,
+			String recipeImage) {
 		super();
 		this.menuId = menuId;
 		this.restaurantId = restaurantId;
@@ -54,7 +59,10 @@ public class Menu {
 		this.price = price;
 		this.ingredients = ingredients;
 		this.category = category;
+		this.recipeImage = recipeImage;
 	}
+
+
 
 	public int getMenuId() {
 		return menuId;
@@ -104,13 +112,19 @@ public class Menu {
 		this.category = category;
 	}
 
+	public String getRecipeImage() {
+		return recipeImage;
+	}
+
+	public void setRecipeImage(String recipeImage) {
+		this.recipeImage = recipeImage;
+	}
+
 	@Override
 	public String toString() {
 		return "Menu [menuId=" + menuId + ", restaurantId=" + restaurantId + ", itemName=" + itemName + ", price="
-				+ price + ", ingredients=" + ingredients + ", category=" + category + "]";
+				+ price + ", ingredients=" + ingredients + ", category=" + category + ", recipeImage=" + recipeImage
+				+ "]";
 	}
-	
-	
-	
 	
 }
