@@ -1,5 +1,7 @@
 package com.Foodie.App.webservice.entity;
 
+import java.util.UUID;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,21 +38,32 @@ public class Users {
 	
 	@Column(name="address")
 	private String address;
+
+	@Column(name="login_type_identifier")
+	private int loginType;
+	
+	@Column(name="auth_token")
+	private String authToken = UUID.randomUUID().toString();
 	
 	@Column(name="foodie_cash")
 	private int foodieCash;
 	
 	public Users() {}
 
-	public Users(int userId, String userName, String email, String phone, String address, int foodieCash) {
+	
+	public Users(int userId, String userName, String email, String phone, String address, int loginType,
+			String authToken, int foodieCash) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
 		this.email = email;
 		this.phone = phone;
 		this.address = address;
+		this.loginType = loginType;
+		this.authToken = authToken;
 		this.foodieCash = foodieCash;
 	}
+
 
 	public int getUserId() {
 		return userId;
