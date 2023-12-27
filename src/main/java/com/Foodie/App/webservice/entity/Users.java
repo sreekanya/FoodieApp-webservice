@@ -113,10 +113,32 @@ public class Users {
 		this.foodieCash = foodieCash;
 	}
 
+	public int getLoginType() {
+		return loginType;
+	}
+
+
+	public void setLoginType(int loginType) {
+		this.loginType = loginType;
+	}
+
+
+	public String getAuthToken() {
+		return authToken;
+	}
+
+
+	public void setAuthToken(String authToken) {
+		this.authToken = authToken;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Users [userId=" + userId + ", userName=" + userName + ", email=" + email + ", phone=" + phone
-				+ ", address=" + address + ", foodieCash=" + foodieCash + "]";
+				+ ", address=" + address + ", loginType=" + loginType + ", authToken=" + authToken + ", foodieCash="
+				+ foodieCash + "]";
 	}
+
 	
 }
